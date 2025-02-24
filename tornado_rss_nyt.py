@@ -21,7 +21,7 @@ class HomeHandler(tornado.web.RequestHandler):
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Select News Source</title>
+            <title>Pilih Sumber Berita Pilihan Anda</title>
             <style>
                 body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
                 h1 { color: darkblue; }
@@ -73,7 +73,7 @@ class NewsHandler(tornado.web.RequestHandler):
             </style>
         </head>
         <body>
-            <h1>{source.replace('_', ' ').title()} News</h1>
+            <h1>Berita {source.replace('_', ' ').title()}</h1>
             <a class="back-btn" href="/">← Kembali ke Laman Utama</a>
         """
 
@@ -117,3 +117,4 @@ if __name__ == "__main__":
     app.listen(8888)  # Runs on http://localhost:8888
     print("Server started at http://localhost:8888")
     tornado.ioloop.IOLoop.current().start()
+
